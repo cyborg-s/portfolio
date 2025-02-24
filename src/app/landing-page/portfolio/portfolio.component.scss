@@ -1,0 +1,30 @@
+.portfolioHeader{
+    margin-top: 120px;
+    justify-content: end;
+    align-items: center;
+    gap: 32px;
+    >.lineLeft{
+        width: 100px;
+        height: 0;
+        border: 1px solid #9747FF;
+    }
+    >.lineRight{
+        width: 507px;
+        height: 0;
+        border: 1px solid #9747FF;
+    }
+    >h1{
+        font-size: 90px;
+        font-weight: 700;
+        color: #FFFFFF;
+        margin: 0;
+    }
+}
+
+.undertitle{
+    justify-content: center;
+    font-size: 16px;
+    color: #FFFFFF;
+    font-weight: 400;
+}
+

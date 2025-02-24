@@ -1,0 +1,58 @@
+.roundPic{
+    border-radius: 50%;
+    height: 453px;
+    width: 453px;
+    border: 2px solid #70E61C;
+}
+
+.picLine{
+    height: 0;
+    width: 267px;
+    border: 1px solid #70E61C;
+}
+
+.aboutMe{
+    height: 881px;
+    justify-content: space-between;
+    color: #FFFFFF;
+}
+
+
+.imgAboutMe{
+    height: 32px;
+}
+
+.wrap{
+    text-wrap: wrap;
+}
+
+.aboutMeText{
+    width: 520px;
+    margin-left: 100px;
+}
+
+.gap{
+    gap: 16px;
+}
+
+h1{
+    font-size: 90px;
+    font-weight: 700;
+    margin-top: 0;
+}
+
+p{
+    font-size: 16px;
+    font-weight: 400;
+}
+
+.shadow2{
+    position: relative;
+    z-index: -1;
+    top: -1050px;
+    left: 1100px;
+}
+
+.shadowDiv{
+    height: 0;
+}

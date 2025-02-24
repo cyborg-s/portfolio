@@ -1,0 +1,62 @@
+img{
+    height: 339px;
+}
+
+.pokedex{
+    margin-top: 100px;
+    height: 339px;
+    gap: 35px;
+    justify-content: center;
+    >.left{
+        width: 620px;
+        justify-content: center;
+    }
+    >.right{
+        flex-direction: column;
+        width: 513px;
+        height: 339px;
+        justify-content: end;
+        gap: 35px;
+        >h2{
+            margin: 0;
+           font-size: 32px;
+           font-weight: 700;
+           color: #9747FF; 
+        }
+        >h3{
+            font-size: 23px;
+            font-weight: 400;
+            color: #70E61C;
+            margin: 0;
+        }
+        >p{
+            margin: 0;
+            font-size: 16px;
+            color: #FFFFFF;
+            font-weight: 400;
+        }
+        >.buttons{
+            >a{
+                text-decoration: none;
+                gap: 10px;
+                height: 58px;
+                padding-inline: 30px;
+                padding-block: 15px;
+                border-radius: 10px;
+            }
+            >.liveButton{
+                text-decoration: none;
+                color: #FFFFFF;
+                background-color: #9747FF;
+                width: 152px;
+                margin-right: 86px;
+            }
+            >.gitButton{
+                text-decoration: none;
+                color: #FFFFFF;
+                width: 137px;
+                border: 1px solid #70E61C;
+            }
+        }
+    }
+}

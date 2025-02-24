@@ -1,0 +1,63 @@
+<!-- <div class="container">
+    <form (ngSubmit)="onSubmit()">
+  
+      <label for="name">First Name</label>
+      <input [(ngModel)]="contactData.name" type="text" id="name" name="firstname" placeholder="Your name..">
+  
+      <label for="email">E-Mail</label>
+      <input [(ngModel)]="contactData.email" type="email" id="email" name="lastname" placeholder="Your E-Mail..">
+  
+      <label for="massage">Subject</label>
+      <textarea [(ngModel)]="contactData.massage" id="massage" name="massage" placeholder="Write something.." style="height:200px"></textarea>
+  
+      <input type="submit" value="Submit">
+  
+    </form>
+  </div> -->
+
+<div class="contact">
+  <div class="header flex center">
+    <div class="line"></div>
+    <h1>Contact</h1>
+  </div>
+  <div class="contactForm flex">
+    <div class="left">
+      <h2>Got a problem to solve?</h2>
+      <p>Encourage people to contact you and describe what role you are interested in. Show that you will add value to their projects through your work.</p>
+      <p>Need a Frontend developer? Contact me!</p>
+    </div>
+    <div class="right flex">
+      <form class="flex form" (ngSubmit)="onSubmit()">
+        <input
+          [(ngModel)]="contactData.email"
+          type="email"
+          id="email"
+          name="lastname"
+          placeholder="Your E-Mail.."
+        />
+        <input
+          [(ngModel)]="contactData.email"
+          type="email"
+          id="email"
+          name="lastname"
+          placeholder="Your E-Mail.."
+        />
+        <textarea
+          [(ngModel)]="contactData.massage"
+          id="massage"
+          name="massage"
+          placeholder="Write something.."
+          style="height: 200px"
+        ></textarea>
+        <div class="check flex">
+          <input type="checkbox" name="policy" id="policy" />
+          <p>
+            I've read the privacy policy and agree to the processing of my data
+            as outlined.
+          </p>
+        </div>
+        <button disabled class="submit">Send massage :)</button>
+      </form>
+    </div>
+  </div>
+</div>
