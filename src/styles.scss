@@ -1,1 +1,54 @@
 /* You can add global styles to this file, and also import other style files */
+/* poppins-regular - latin */
+@font-face {
+    font-display: swap; /* Check https://developer.mozilla.org/en-US/docs/Web/CSS/@font-face/font-display for other options. */
+    font-family: 'Poppins';
+    font-style: normal;
+    font-weight: 400;
+    src: url('./assets/font/poppins-v22-latin-regular.woff2') format('woff2'); /* Chrome 36+, Opera 23+, Firefox 39+, Safari 12+, iOS 10+ */
+  }
+
+  body{
+    margin: 0;
+    display: flex;
+    justify-content: center;
+    width: 100vw;
+    overflow-x: hidden;
+    font-family: 'Poppins';
+    background-color: #141D2F;
+}
+
+.width{
+    width: 100%;
+    max-width: 1440px;
+    display: flex;
+    justify-content: center;
+}
+
+.height{
+    height: 1000px;
+}
+
+.column{
+    flex-direction: column;
+}
+
+.poppins{
+    font-family: 'Poppins';
+}
+
+.flex{
+    display: flex;
+}
+
+.center{
+    align-items: center;
+}
+
+.header{
+    position: sticky;
+    top: 0;
+    z-index: 2;
+    width: 100vw;
+    background-color: #141D2F;
+}
