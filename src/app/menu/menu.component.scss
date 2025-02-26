@@ -33,14 +33,27 @@ img{
     height: 30px;
 }
 
-.burgerMenu{
-    display: none!important;
+.menu{
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding-top: 180px;
+    font-size: 29px;
+    font-weight: 400;
+    gap: 29px;
+    background-color: rgba(0, 0, 0, 0.632);
+    >a{
+        text-decoration: none;
+        color: #FFFFFF;
+        text-align: center;
+    }
 }
 
 @media (max-width: 390px) {
-    .menu{
-        display: none!important;
-    }
+    
+    
     
     .burgerMenu{
         display: block!important;

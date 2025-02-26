@@ -1,3 +1,85 @@
+<div class="contact">
+  <div class="headerContact flex center">
+    <div class="line"></div>
+    <h1>Contact</h1>
+  </div>
+  <div class="contactForm flex">
+    <div class="left">
+      <h2>Got a problem to solve?</h2>
+      <p>
+        Encourage people to contact you and describe what role you are
+        interested in. Show that you will add value to their projects through
+        your work.
+      </p>
+      <p>Need a Frontend developer? Contact me!</p>
+    </div>
+    <div class="right flex">
+      <form class="flex form" (ngSubmit)="onSubmit(contactForm)" #contactForm="ngForm">
+        <input
+          [(ngModel)]="contactData.name"
+          #name="ngModel"
+          type="text"
+          id="name"
+          name="name"
+          placeholder="Your Name.."
+          required
+          #nameRef="ngModel"
+         [ngClass]="{'error': nameRef.invalid && nameRef.touched}"
+        />
+        @if (!name.valid && name.touched){
+          <span>Your name is required</span>
+        }
+        <input
+          [(ngModel)]="contactData.email"
+          #email="ngModel"
+          type="email"
+          id="email"
+          name="email"
+          placeholder="Your E-Mail.."
+          required
+          pattern="[a-zA-Z0-9._%+\-]+@[a-zA-Z0-9.\-]+\.[a-zA-Z]{2,}"
+          #emailRef="ngModel"
+          [ngClass]="{'error': emailRef.invalid && emailRef.touched}"
+        />
+        @if (!email.valid && email.touched){
+          <span>Your email is required</span>
+        }
+        <textarea
+          #message="ngModel"
+          minlength="4"
+          [(ngModel)]="contactData.message"
+          id="message"
+          name="message"
+          placeholder="Write something.."
+          style="height: 200px"
+          required
+          #messageRef="ngModel"
+          [ngClass]="{'error': messageRef.invalid && messageRef.touched}"
+        ></textarea>
+        @if (!message.valid && message.touched){
+          <span>Your message is empty</span>
+        }
+        <div class="check flex">
+          <input type="checkbox" name="policy" id="policy" required [(ngModel)]="isChecked"/>
+          <p>
+            I've read the
+            <a target="_blank" class="privacy" href="privacy">privacy policy</a>
+            and agree to the processing of my data as outlined.
+          </p>
+        </div>
+        <button [ngClass]="{ 'enabled-button': isFormValid(), 'disabled-button': !isFormValid() }" [disabled]="!isFormValid()" class="submit">Send massage :)</button>
+      </form>
+    </div>
+  </div>
+  <div class="goUp">
+    <a href="#me">
+      <img src="../../../assets/img/learningtransparent.png" alt="" />
+    </a>
+  </div>
+</div>
+
+
+
 <!-- <div class="container">
     <form (ngSubmit)="onSubmit()">
   
@@ -14,55 +96,3 @@
   
     </form>
   </div> -->
-
-<div class="contact">
-  <div class="headerContact flex center">
-    <div class="line"></div>
-    <h1>Contact</h1>
-  </div>
-  <div class="contactForm flex">
-    <div class="left">
-      <h2>Got a problem to solve?</h2>
-      <p>Encourage people to contact you and describe what role you are interested in. Show that you will add value to their projects through your work.</p>
-      <p>Need a Frontend developer? Contact me!</p>
-    </div>
-    <div class="right flex">
-      <form class="flex form" (ngSubmit)="onSubmit()">
-        <input
-          [(ngModel)]="contactData.email"
-          type="email"
-          id="email"
-          name="lastname"
-          placeholder="Your E-Mail.."
-        />
-        <input
-          [(ngModel)]="contactData.email"
-          type="email"
-          id="email"
-          name="lastname"
-          placeholder="Your E-Mail.."
-        />
-        <textarea
-          [(ngModel)]="contactData.massage"
-          id="massage"
-          name="massage"
-          placeholder="Write something.."
-          style="height: 200px"
-        ></textarea>
-        <div class="check flex">
-          <input type="checkbox" name="policy" id="policy" />
-          <p>
-            I've read the privacy policy and agree to the processing of my data
-            as outlined.
-          </p>
-        </div>
-        <button disabled class="submit">Send massage :)</button>
-      </form>
-    </div>
-  </div>
-  <div class="goUp">
-    <a href="#me">
-      <img src="../../../assets/img/goUp.png" alt="">
-    </a>
-  </div>
-</div>

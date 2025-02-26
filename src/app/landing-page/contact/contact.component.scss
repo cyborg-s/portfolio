@@ -2,18 +2,19 @@ input[type="text"],
 [type="email"],
 textarea {
   background-color: #141d2f;
+  color: #FFFFFF;
   width: 617px;
   padding-inline: 25px;
   padding-block: 15px;
   border: 1px solid #9747ff;
   border-radius: 10px;
   box-sizing: border-box;
-  margin-top: 10px;
+  margin-top: 32px;
   margin-bottom: 0px;
   resize: vertical;
 }
 
-/* Style the submit button with a specific background color etc */
+
 input[type="submit"] {
   background-color: #04aa6d;
   color: white;
@@ -23,7 +24,7 @@ input[type="submit"] {
   cursor: pointer;
 }
 
-/* When moving the mouse over the submit button, add a darker green color */
+
 input[type="submit"]:hover {
   background-color: #45a049;
 }
@@ -38,10 +39,8 @@ input[type="checkbox"]{
     cursor: pointer;
     position: relative;
     display: inline-block;
-
     &:checked {
-        border-color: #70E61C; // Border-Farbe, wenn angehakt
-
+        border-color: #70E61C;
         &::after {
             content: "";
             position: absolute;
@@ -49,11 +48,17 @@ input[type="checkbox"]{
             left: 4px;
             width: 4px;
             height: 10px;
-            border: solid #70E61C; // Haken in Border-Farbe
+            border: solid #70E61C;
             border-width: 0 2px 2px 0;
             transform: rotate(45deg);
         }
     }
+}
+
+input[type="text"]:hover,
+[type="email"]:hover,
+textarea:hover{
+  border: 1px solid #70E61C;
 }
 
 .goUp{
@@ -63,11 +68,24 @@ input[type="checkbox"]{
   >a{
     padding-right: 100px;
     padding-bottom: 100px;
+    >img{
+      height: 39px;
+      transition: all 0.1s ease-out;
+    background-color: #FFFFFF;
+    mask-image: url("../../../assets/img/goUp.png");
+    -webkit-mask-image: url("../../../assets/img/goUp.png");
+    mask-repeat: no-repeat;
+    mask-position: center;
+    mask-size: contain;
+    &:hover{
+      background-color: #70E61C;
+    }
+    }
   }
 }
 
 .contact {
-  margin-top: 50px;
+  margin-top: 100px;
   flex-direction: column;
   > .headerContact {
     gap: 32px;
@@ -95,6 +113,7 @@ input[type="checkbox"]{
             justify-content: center;
             align-items: center;
             gap: 8px;
+            margin-top: 32px;
           > p {
             font-size: 14px;
             font-weight: 400;
@@ -121,4 +140,32 @@ input[type="checkbox"]{
       color: #FFFFFF;
     }
   }
+}
+
+
+.privacy{
+  text-decoration: none;
+  color: #9747ff;
+  &:hover{
+    text-decoration: underline;
+  }
+}
+
+span{
+  color: red;
+  text-align: start;
+  width: 100%;
+  font-size: 14px;
+  font-weight: 400;
+  height: 0px;
+}
+
+.error {
+  border: 1px solid red!important;
+}
+
+.enabled-button {
+  background-color: #70E61C!important;
+  border: #70E61C;
+  color: white;
 }

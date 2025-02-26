@@ -1,13 +1,14 @@
 import { Component } from '@angular/core';
 
 @Component({
-  selector: 'app-nav-bar',
+  selector: 'app-menu',
   standalone: true,
   imports: [],
-  templateUrl: './nav-bar.component.html',
-  styleUrl: './nav-bar.component.scss'
+  templateUrl: './menu.component.html',
+  styleUrl: './menu.component.scss'
 })
-export class NavBarComponent {
+export class MenuComponent {
+
   isOpen = false;
 
   toggleMenu() {

@@ -13,12 +13,50 @@ h1{
     align-items: center;
     width: 88px;
     height: 101px;
-    .skillImg{
+    >.skillImg{
     height: 60px;
+    transition: all 0.1s ease-out;
     }
-    .skillTag{
+    >.skillTag{
         font-size: 16px;
         font-weight: 700;
+        color: #FFFFFF;
+    }
+    &:hover img{
+        transform: translateY(-10px);
+    }
+   
+}
+
+.cLearning{
+    display: flex;
+    padding-right: 88px;
+    padding-bottom: 50px;
+    flex-direction: column;
+    align-items: center;
+    width: 88px;
+    height: 101px;
+    transition: color 0.3s ease, filter 0.3s ease;
+    >.skillImg{
+    height: 60px;
+    width: 60px;
+    transition: all 0.1s ease-out;
+    background-color: #9747FF;
+    mask-image: url("../../../assets/img/learning.png");
+    -webkit-mask-image: url("../../../assets/img/learning.png");
+    mask-repeat: no-repeat;
+    mask-position: center;
+    mask-size: contain;
+    }
+    >.skillTag{
+        font-size: 16px;
+        font-weight: 700;
+        color: #9747FF;
+    }
+    &:hover img{
+        background-color: #FFFFFF;
+    }
+    &:hover p{
         color: #FFFFFF;
     }
 }
@@ -74,6 +112,7 @@ h2{
 
 .h2Color{
     color: #9747FF;
+    padding-left: 10px;
 }
 
 .button2{
@@ -90,6 +129,12 @@ h2{
     font-weight: 400;
     gap: 10px;
     margin-top: 44px!important;
+    transition: all 0.1s ease-out;
+    transform-origin: top right;
+    &:hover{
+        background-color: #9747FF;
+        transform: scale(1.1, 1.1);
+    }
 }
 
 .shadow3Div{

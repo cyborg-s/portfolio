@@ -33,7 +33,7 @@
 }
 
 .height{
-    height: 1000px;
+    height: 900px;
 }
 
 .column{
@@ -62,4 +62,16 @@
     z-index: 2;
     width: 100vw;
     background-color: #141D2F;
+}
+
+*{
+    scroll-behavior: smooth;
+}
+
+.liveButton:hover{
+    background-color: #70E61C!important;
+}
+
+.gitButton:hover{
+    background-color: #70E61C!important;
 }
