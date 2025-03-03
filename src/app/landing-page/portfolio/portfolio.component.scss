@@ -32,6 +32,18 @@
     margin-top: 200px;
 }
 
+.shadow4Div{
+    height: 0;
+    >.shadow4{
+        position: relative;
+        top: -600px;
+        left: -350px;
+        z-index: -1;
+    }
+}
+
+
+
 @media (max-width: 390px){
     h1{
         font-size: 45px!important;

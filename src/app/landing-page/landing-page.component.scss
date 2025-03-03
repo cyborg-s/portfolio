@@ -3,7 +3,11 @@
     position: absolute;
     top: 177.6px;
     height: 2000px;
-    right: 0;
+    right: -250px;
+}
+
+#contact{
+    overflow-y: hidden;
 }
 
 @media (max-width: 390px){

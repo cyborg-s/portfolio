@@ -23,7 +23,6 @@
     max-width: 1440px;
     display: flex;
     justify-content: center;
-    overflow-x: hidden;
     position: relative;
 }
 
@@ -32,6 +31,7 @@
     display: flex;
     flex-direction: column;
    align-items: center;
+   overflow: hidden;
 }
 
 .height{
@@ -76,4 +76,10 @@
 
 .gitButton:hover{
     background-color: #70E61C!important;
+}
+
+@media (max-width: 1440px){
+    .width{
+        overflow-x: hidden;
+    }
 }

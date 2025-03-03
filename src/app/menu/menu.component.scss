@@ -52,6 +52,7 @@ img{
 }
 
 .burgerMenu{
+    display: none;
     position: absolute;
     top: 30px;
     left: 50px;
@@ -70,6 +71,6 @@ img{
     header{
         margin-inline: 25px;
         padding-block: 0px;
-        >a{}
+
     }
 }

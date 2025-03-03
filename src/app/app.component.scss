@@ -20,6 +20,7 @@
 }
 
 .burgerMenu{
+    display: none;
     position: fixed;
     top: 70px;
     right: 25px;
@@ -39,6 +40,7 @@
     }
 
     .burgerMenu{
+        display: block;
         right: unset;
         left: 333px;
         top: 40px;

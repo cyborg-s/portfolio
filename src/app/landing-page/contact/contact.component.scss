@@ -103,6 +103,7 @@ textarea:hover{
   > .contactForm {
     justify-content: space-between;
     margin-inline: 100px;
+    gap: 10px;
     > .right {
       width: 617px;
       height: 508px;
@@ -170,6 +171,16 @@ span{
   color: white;
 }
 
+.shadow5Div{
+  height: 0;
+  >.shadow5{
+    position: relative;
+    top: -500px;
+    left: -500px;
+    z-index: -1;
+  }
+}
+
 
 @media(max-width: 390px){
   .contact{
@@ -190,6 +201,7 @@ span{
       margin-inline: 24px;
       >.left{
         width: 340px;
+        height: auto;
       }
       >.right{
         width: 340px;
