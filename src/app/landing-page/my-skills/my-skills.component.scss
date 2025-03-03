@@ -149,21 +149,19 @@ h2{
     }
 }
 
-
-
 @media(max-width: 390px){
     .skills{
-        margin-top: 0;
+        margin-top: 100px;
         flex-direction: column;
     }
 
     .skillLeft{
-        width: 390px;
+        width: 100vw;
         height: auto;
         margin: 0;
         justify-content: center;
         >div{
-            padding: 12px;
+            padding: 0;
             >img{
                 width: 48px;
             }
@@ -174,25 +172,26 @@ h2{
     }
 
     .skillRight{
-        width: 390px;
+        width: 100vw;
         margin: 0;
         >div{
-            width: 390px;
+            width: 100vw;
             >div{
-                width: 390px;
+                width: 100vw;
                 align-items: center;
                 display: flex;
                 flex-direction: column;
                 >h1{
                     font-size: 45px;
                     text-align: end;
-                    width: 340px;
+                    width: 95vw;
                 }
                 >p{
-                    width: 336px!important;
+                    width: 95vw!important;
+                    margin: 10px;
                 }
                 >div{
-                    width: 350px;
+                    width: 100vw;
                     justify-content: end;
                 }
                 
@@ -202,7 +201,89 @@ h2{
 
     .mobilPosition{
         position: relative;
-        top: -500px;
+        top: -340px;
+    }
+
+    .mobilImg{
+        position: relative;
+        top: 350px;
+    }
+
+    .line{
+        position: absolute;
+        left: 370px;
+        top: 1930px;
+        width: 68px!important;
+        margin: 0;
+    }
+
+    h2{
+        font-size: 24px;
+    }
+
+    .shadow3Div{
+
+        >img{
+            width: 264px;
+            left: -180px;
+            top: -550px;
+        }
+    }
+}
+
+@media(max-width: 350px){
+    .skills{
+        margin-top: 100px;
+        flex-direction: column;
+    }
+
+    .skillLeft{
+        width: 100vw;
+        height: auto;
+        margin: 0;
+        justify-content: center;
+        >div{
+            padding: 0;
+            >img{
+                width: 48px;
+            }
+            >p{
+                font-size: 14px;
+            }
+        }
+    }
+
+    .skillRight{
+        width: 100vw;
+        margin: 0;
+        >div{
+            width: 100vw;
+            >div{
+                width: 100vw;
+                align-items: center;
+                display: flex;
+                flex-direction: column;
+                >h1{
+                    font-size: 45px;
+                    text-align: end;
+                    width: 95vw;
+                }
+                >p{
+                    width: 95vw!important;
+                    margin: 10px;
+                }
+                >div{
+                    width: 100vw;
+                    justify-content: end;
+                }
+                
+            }
+        }
+    }
+
+    .mobilPosition{
+        position: relative;
+        top: -425px;
     }
 
     .mobilImg{

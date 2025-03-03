@@ -33,6 +33,7 @@
     }
 }
 
+
 @media (max-width: 390px){
     .menuOverlay{
         display: block;
@@ -41,8 +42,8 @@
 
     .burgerMenu{
         display: block;
-        right: unset;
-        left: 333px;
+        right: 25px;
+      
         top: 40px;
     }
 

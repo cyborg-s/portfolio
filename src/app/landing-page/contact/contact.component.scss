@@ -184,7 +184,7 @@ span{
 
 @media(max-width: 390px){
   .contact{
-    width: 390px;
+    width: 100vw;
     margin-top: 100px;
     display: flex;
     justify-content: center;
@@ -198,35 +198,43 @@ span{
     }
     >.contactForm{
       flex-direction: column;
-      margin-inline: 24px;
+      margin-inline: 0px;
       >.left{
-        width: 340px;
+        width: 90vw;
         height: auto;
+        margin-inline: 27px;
       }
       >.right{
-        width: 340px;
+        width: 100vw;
+        justify-content: center;
       }
     }
   }
   input[type="text"],
 [type="email"],
 textarea {
-  width: 340px;
+  width: 90vw;
 }
 
 input[type="checkbox"]{
   margin: 0;
-  width: 28px!important;
+  margin-left: 14px;
+  width: 32px!important;
 }
 
 .goUp{
-  width: 390px;
+  width: 100vw;
   align-items: center;
   height: 200px;
   >a{
     padding-right: 24px;
     padding-bottom: 0;
   }
+}
+
+.check{
+  width: 95vw;
+  justify-content: center;
 }
 
 }

@@ -70,7 +70,7 @@ img {
         justify-content: center;
     }
     >.right{
-        width: 342px;
+        width: 95vw;
         align-items: center;
         >h3{
             text-align: center;
@@ -79,5 +79,9 @@ img {
             text-align: center;
         }
     }
+  }
+
+  .liveButton{
+    margin-right: 30px!important;
   }
 }

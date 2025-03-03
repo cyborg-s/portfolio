@@ -61,7 +61,9 @@ img{
     }
 }
 
-@media (max-width: 390px) {
+
+
+  @media (max-width: 390px) {
     .pokedex {
       flex-direction: column;
       height: auto;
@@ -71,7 +73,7 @@ img{
           justify-content: center;
       }
       >.right{
-          width: 342px;
+          width: 95vw;
           align-items: center;
           >h3{
               text-align: center;
@@ -81,4 +83,9 @@ img{
           }
       }
     }
+  
+    .liveButton{
+      margin-right: 30px!important;
+    }
   }
+  
