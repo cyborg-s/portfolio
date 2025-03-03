@@ -118,3 +118,67 @@ p{
 }
 }
 
+@media (max-width: 390px){
+    .profilePic{
+        position: unset;
+        width: 350px;
+        height: 447px;
+        left: 0px;
+    }
+
+    div{
+        width: 376px;
+        height: auto;
+        margin-top: 0;
+        flex-direction: column;
+        >div{
+            height: 230px;
+            flex-direction: row;
+        >div{
+            margin-left: -60px;
+        }
+        }
+
+    }
+
+    .rotate{
+        margin-left: -30px;
+        margin-top: 80px;
+        font-size: 32px;
+    }
+
+    .p2{
+        font-size: 38px;
+    }
+
+    .p1{
+        font-size: 26px;
+    }
+
+    .scroll{
+        display: none;
+    }
+
+    .button1{
+        width: 133px;
+        height: 49px;
+        font-size: 16px;
+    }
+
+    .social{
+        
+        >div{
+            margin-left: 60px;
+            >p{
+                display: none;
+            }
+        }
+    }
+
+    .profilePicBackground{
+        height: 450px;
+        width: 500px;
+        top: -625px;
+        left: -50px;
+    }
+}

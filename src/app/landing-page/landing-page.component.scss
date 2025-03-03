@@ -5,3 +5,17 @@
     height: 2000px;
     right: 0;
 }
+
+@media (max-width: 390px){
+    .background{
+        top: -115px;
+        right: -780px;
+        box-sizing: border-box;
+    }
+
+    app-portfolio{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+}

@@ -61,3 +61,32 @@ p{
 .shadowDiv{
     height: 0;
 }
+
+@media (max-width: 390px){
+    h1{
+        font-size: 45px;
+        
+    }
+
+    .aboutMe{
+        width: 342px;
+        flex-direction: column;
+        margin-top: 0;
+        margin-inline: 19px;
+        height: 1000px;
+    }
+
+    .aboutMeText{
+        margin: 0;
+        width: 342px;
+    }
+
+    .picDiv{
+        display: none;
+    }
+
+    .shadow2{
+        height: 391px;
+        left: 240px;
+    }
+}

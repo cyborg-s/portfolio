@@ -12,17 +12,40 @@
     transition: right 0.3s ease-in-out;
   display: flex;
   flex-direction: column;
-  padding: 20px;
+  padding: 0;
     z-index: 3;
     &.open {
         right: 0;
       }
 }
 
+.burgerMenu{
+    position: fixed;
+    top: 70px;
+    right: 25px;
+    z-index: 4;
+}
+
+.burgerImg{
+    &.open{
+        display: none;
+    }
+}
 
 @media (max-width: 390px){
     .menuOverlay{
         display: block;
         
     }
+
+    .burgerMenu{
+        right: unset;
+        left: 333px;
+        top: 40px;
+    }
+
+    .width{
+        width: 390px;
+    }
 }
+

@@ -169,3 +169,52 @@ span{
   border: #70E61C;
   color: white;
 }
+
+
+@media(max-width: 390px){
+  .contact{
+    width: 390px;
+    margin-top: 100px;
+    display: flex;
+    justify-content: center;
+    >.headerContact{
+      >h1{
+        font-size: 45px;
+      }
+      >.line{
+        width: 20px;
+      }
+    }
+    >.contactForm{
+      flex-direction: column;
+      margin-inline: 24px;
+      >.left{
+        width: 340px;
+      }
+      >.right{
+        width: 340px;
+      }
+    }
+  }
+  input[type="text"],
+[type="email"],
+textarea {
+  width: 340px;
+}
+
+input[type="checkbox"]{
+  margin: 0;
+  width: 28px!important;
+}
+
+.goUp{
+  width: 390px;
+  align-items: center;
+  height: 200px;
+  >a{
+    padding-right: 24px;
+    padding-bottom: 0;
+  }
+}
+
+}

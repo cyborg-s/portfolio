@@ -60,3 +60,25 @@ img{
         }
     }
 }
+
+@media (max-width: 390px) {
+    .pokedex {
+      flex-direction: column;
+      height: auto;
+      gap: 0;
+      >.left{
+          width: 342px;
+          justify-content: center;
+      }
+      >.right{
+          width: 342px;
+          align-items: center;
+          >h3{
+              text-align: center;
+          }
+          >p{
+              text-align: center;
+          }
+      }
+    }
+  }

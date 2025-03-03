@@ -69,3 +69,33 @@
 .logo {
   width: 179px;
 }
+
+
+@media (max-width:390px){
+  .footer{
+    height: 380px;
+    >.footerWidth{
+      flex-direction: column;
+      align-items: center;
+      height: 220px;
+      padding-bottom: 30px;
+      >.left{
+        padding-left: 0;
+        justify-content: center;
+        width: auto;
+      }
+      >.right{
+        padding-right: 0;
+        justify-content: center;
+      }
+    }
+  }
+
+  
+
+  .legal{
+    position: relative;
+    top: 200px;
+    text-align: center;
+  }
+}
