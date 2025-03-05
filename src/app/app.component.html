@@ -3,7 +3,7 @@
     <img class="burgerImg" [ngClass]="{'open': isOpen}" (click)="toggleMenu()" src="../assets/img/burger.png" alt="">
     <img class="burgerImg" [ngClass]="{'open': !isOpen}" (click)="toggleMenu()" src="../assets/img/close.png" alt="">
   </div>
-<app-menu class="menuOverlay" [ngClass]="{'open': isOpen}"></app-menu>
+<app-menu class="menuOverlay" (click)="toggleMenu()" [ngClass]="{'open': isOpen}"></app-menu>
 
 
 <router-outlet></router-outlet>
