@@ -23,7 +23,7 @@
     max-width: 1440px;
     display: flex;
     justify-content: center;
-    position: relative;
+    
 }
 
 .widthPage{
@@ -80,5 +80,29 @@
 @media (max-width: 1440px){
     .width{
         overflow-x: hidden;
+    }
+}
+
+
+@media (max-width: 1100px){
+    h1{
+        font-size: 80px!important;
+    }
+}
+
+
+@media (max-width: 900px){
+    h1{
+        font-size: 75px!important;
+    }
+}
+
+@media (max-width: 820px){
+    .width{
+        position: relative;
+    }
+
+    h1{
+        font-size: 45px!important;
     }
 }

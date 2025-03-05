@@ -3,11 +3,12 @@ h1{
     font-weight: 700;
     margin-top: 0;
     color: #FFFFFF;
+    text-align: end;
 }
 
 .skillDiv{
     display: flex;
-    padding-right: 88px;
+    padding-right: 5vw;
     padding-bottom: 50px;
     flex-direction: column;
     align-items: center;
@@ -63,7 +64,6 @@ h1{
 
 .skillLeft{
     margin-left: 100px;
-    height: 404px;
     width: 704px;
     flex-wrap: wrap;
 }
@@ -81,7 +81,7 @@ h1{
 .line{
     margin-top: 68px;
     margin-left: 36px;
-    width: 68px;
+    width: 4vw;
     height: 0;
     border: 1px solid #9747FF;
 }
@@ -99,7 +99,7 @@ h1{
             color: #FFFFFF;
             font-size: 16px;
             font-weight: 400;
-            width: 467px;
+            width: 38vw;
             text-align: justify;
         }
     }
@@ -149,7 +149,7 @@ h2{
     }
 }
 
-@media(max-width: 390px){
+@media(max-width: 820px){
     .skills{
         margin-top: 100px;
         flex-direction: column;
@@ -310,5 +310,29 @@ h2{
             left: -180px;
             top: -550px;
         }
+    }
+}
+
+@media (max-width: 1200px) {
+    h2{
+        font-size: 30px;
+    }
+}
+
+@media (max-width: 1050px) {
+    h2{
+        font-size: 28px;
+    }
+}
+
+@media (max-width: 950px) {
+    h2{
+        font-size: 26px;
+    }
+}
+
+@media (max-width: 890px) {
+    h2{
+        font-size: 24px;
     }
 }

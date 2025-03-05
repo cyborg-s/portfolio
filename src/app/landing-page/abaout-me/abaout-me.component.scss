@@ -1,21 +1,24 @@
 .roundPic{
     border-radius: 50%;
-    height: 453px;
-    width: 453px;
+    width: 31vw;
     border: 2px solid #70E61C;
 }
 
 .picLine{
     height: 0;
-    width: 267px;
+    width: 100%;
     border: 1px solid #70E61C;
 }
 
+.lineWidth{
+    width: 18vw;
+}
+
 .aboutMe{
-    height: 881px;
+    gap: 10px;
     justify-content: space-between;
     color: #FFFFFF;
-    margin-top: 200px;
+    margin-top: 124px;
 }
 
 
@@ -62,10 +65,32 @@ p{
     height: 0;
 }
 
-@media (max-width: 390px){
+
+
+
+@media (max-width:1230px){
+    .lineWidth{
+        width: 12vw;
+    }
+
+    .aboutMeText{
+        width: 500px;
+    }
+}
+
+@media (max-width:1060px){
+    .lineWidth{
+        width: 10vw;
+    }
+
+    p{
+        font-size: 14px;
+    }
+}
+
+@media (max-width: 820px){
     h1{
         font-size: 45px;
-        
     }
 
     .aboutMe{
@@ -74,6 +99,8 @@ p{
         margin-top: 0;
         margin-inline: 19px;
         height: auto;
+        align-items: start;
+        margin-left: 8vw;
     }
 
     .aboutMeText{

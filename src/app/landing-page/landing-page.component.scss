@@ -1,19 +1,19 @@
 .background{
     z-index: -1;
     position: absolute;
-    top: 177.6px;
-    height: 2000px;
-    right: -250px;
+    top: 15vw;
+    width: 100vw;
+    right: 0;
 }
 
 #contact{
-    overflow-y: hidden;
+    overflow-y: clip;
 }
 
-@media (max-width: 390px){
+@media (max-width: 820px){
     .background{
-        top: -115px;
-        right: -780px;
+        top: 37vw;
+
         box-sizing: border-box;
     }
 

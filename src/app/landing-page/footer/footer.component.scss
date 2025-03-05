@@ -46,6 +46,7 @@
         font-size: 23px;
         font-weight: 400;
         margin: 0;
+        text-align: center;
       }
     }
     > .right {
@@ -71,7 +72,7 @@
 }
 
 
-@media (max-width:390px){
+@media (max-width:890px){
   .footer{
     height: 380px;
     >.footerWidth{
