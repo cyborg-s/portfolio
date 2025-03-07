@@ -1,7 +1,8 @@
 import { CommonModule } from '@angular/common';
 import { HttpClient } from '@angular/common/http';
-import { Component, inject } from '@angular/core';
+import { Component, ElementRef, inject, ViewChild } from '@angular/core';
 import { FormsModule, NgForm, ReactiveFormsModule } from '@angular/forms';
+import { LanguageService } from '../../services/language.service';
 
 @Component({
   selector: 'app-contact',
@@ -11,7 +12,7 @@ import { FormsModule, NgForm, ReactiveFormsModule } from '@angular/forms';
   styleUrl: './contact.component.scss'
 })
 export class ContactComponent {
-  
+  languageService = inject(LanguageService);
   
   isChecked: boolean = false;
 
@@ -45,6 +46,8 @@ export class ContactComponent {
     },
   };
 
+  @ViewChild('succsess', { static: false }) succsess!: ElementRef;
+
   onSubmit(ngForm: NgForm) {
     if (ngForm.submitted && ngForm.form.valid && !this.mailTest) {
       this.http.post(this.post.endPoint, this.post.body(this.contactData))
@@ -59,7 +62,10 @@ export class ContactComponent {
           complete: () => console.info('send post complete'),
         });
     } else if (ngForm.submitted && ngForm.form.valid && this.mailTest) {
-
+      this.succsess.nativeElement.classList.remove('none');
+      setTimeout(() => {
+        this.succsess.nativeElement.classList.add('none');
+      }, 800);
       ngForm.resetForm();
     }
   }

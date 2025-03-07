@@ -1,12 +1,13 @@
 <div>
-    <img src="../../../assets/img/Profilbild-Platzhalter.png" class="profilePic" alt="">
+    <img src="../../../assets/img/imgGroß.png" class="profilePic" alt="">
     
     <div>
         <div class="space"><p class="rotate">I am</p></div>
         <div>
             <p class="p2">Sascha Nyßen</p>
             <p class="p1">FRONTEND DEVELOPER</p>
-            <a class="button1" href="#contact">Let´s Talk!</a>
+            <a *ngIf="languageService.currentLanguage === 'en'" class="button1" href="#contact">Let´s Talk!</a>
+            <a *ngIf="languageService.currentLanguage === 'de'" class="button1" href="#contact">Lass uns reden!</a>
         </div>
     </div>
 </div>
@@ -25,7 +26,8 @@
         </a>
         <p>nysascha1&#64;gmail.com</p>
     </div>
-    <p class="scroll">Scroll down →</p>
+    <p *ngIf="languageService.currentLanguage === 'en'" class="scroll">Scroll down →</p>
+    <p *ngIf="languageService.currentLanguage === 'de'" class="scroll">Scroll runter →</p>
 </div>
 
 <div class="shadowDiv"><img src="../../../assets/img/shadow1.png" class="profilePicBackground" alt=""></div>

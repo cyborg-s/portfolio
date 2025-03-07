@@ -5,13 +5,16 @@
   </div>
   <div class="contactForm flex">
     <div class="left">
-      <h2>Got a problem to solve?</h2>
-      <p>
-        Encourage people to contact you and describe what role you are
-        interested in. Show that you will add value to their projects through
-        your work.
+      <h2 *ngIf="languageService.currentLanguage === 'en'">Got a problem to solve?</h2>
+      <h2 *ngIf="languageService.currentLanguage === 'de'">Haben Sie ein Problem zu lösen?</h2>
+      <p *ngIf="languageService.currentLanguage === 'en'">
+        I bring creative solutions and commitment to realise your projects efficiently and successfully. With my knowledge, I will help you to achieve your goals. Let's work together and achieve great results!
       </p>
-      <p>Need a Frontend developer? Contact me!</p>
+      <p *ngIf="languageService.currentLanguage === 'de'">
+        Ich bringe kreative Lösungen und Engagement mit, um Ihre Projekte effizient und erfolgreich umzusetzen. Mit meinem Wissen helfe ich Ihnen, Ihre Ziele zu erreichen. Lassen Sie uns zusammenarbeiten und großartige Ergebnisse erzielen!
+      </p>
+      <p *ngIf="languageService.currentLanguage === 'en'">Need a Frontend developer? Contact me!</p>
+      <p *ngIf="languageService.currentLanguage === 'de'">Suchen Sie einen Frontend-Entwickler? Kontaktieren Sie mich!</p>
     </div>
     <div class="right flex">
       <form class="flex form" (ngSubmit)="onSubmit(contactForm)" #contactForm="ngForm">
@@ -61,13 +64,19 @@
         }
         <div class="check flex">
           <input type="checkbox" name="policy" id="policy" required [(ngModel)]="isChecked"/>
-          <p>
+          <p *ngIf="languageService.currentLanguage === 'en'">
             I've read the
             <a target="_blank" class="privacy" href="privacy">privacy policy</a>
             and agree to the processing of my data as outlined.
           </p>
+          <p *ngIf="languageService.currentLanguage === 'de'">
+            Ich habe die
+            <a target="_blank" class="privacy" href="privacy">Datenschutzbestimmungen</a>
+            gelesen und stimme der Verarbeitung meiner Daten wie beschrieben zu.
+          </p>
         </div>
-        <button [ngClass]="{ 'enabled-button': isFormValid(), 'disabled-button': !isFormValid() }" [disabled]="!isFormValid()" class="submit">Send massage :)</button>
+        <button *ngIf="languageService.currentLanguage === 'en'" [ngClass]="{ 'enabled-button': isFormValid(), 'disabled-button': !isFormValid() }" [disabled]="!isFormValid()" class="submit">Send massage :)</button>
+        <button *ngIf="languageService.currentLanguage === 'de'" [ngClass]="{ 'enabled-button': isFormValid(), 'disabled-button': !isFormValid() }" [disabled]="!isFormValid()" class="submit">Nachricht Abschicken :)</button>
       </form>
     </div>
   </div>
@@ -79,4 +88,5 @@
 </div>
 <div class="shadow5Div">
   <img class="shadow5" src="../../../assets/img/shadow5.png" alt="">
+  <div #succsess class="succsess none"><p>Succsess!</p></div>
 </div>

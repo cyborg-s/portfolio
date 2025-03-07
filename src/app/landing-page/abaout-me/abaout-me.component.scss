@@ -1,6 +1,7 @@
 .roundPic{
     border-radius: 50%;
     width: 31vw;
+    height: 31vw;
     border: 2px solid #70E61C;
 }
 
@@ -55,13 +56,14 @@ p{
 }
 
 .shadow2{
-    position: relative;
+    position: absolute;
     z-index: -1;
     top: -1050px;
-    left: 1100px;
+    right: -430px;
 }
 
 .shadowDiv{
+    position: relative;
     height: 0;
 }
 
@@ -114,6 +116,7 @@ p{
 
     .shadow2{
         height: 391px;
-        left: 240px;
+        right: -225px;
+        top: -600px;
     }
 }

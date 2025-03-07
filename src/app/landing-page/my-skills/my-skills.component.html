@@ -42,18 +42,33 @@
         </div>
         <div class="cLearning">
             <img class="skillImg" src="../../../assets/img/learningtransparent.png" alt="">
-            <p class="skillTag textCenter">Continually<br>learning</p>
+            <p *ngIf="languageService.currentLanguage === 'en'" class="skillTag textCenter">Continually<br>learning</p>
+            <p *ngIf="languageService.currentLanguage === 'de'" class="skillTag textCenter">Kontinuierlich<br>lernen</p>
         </div>
     </div>
     <div class="skillRight flex">
         <div class="flex skillText">
-            <div class="mobilPosition"><h1>My Skills</h1>
-            <p>I have worked with various front-end technologies in my projects, including HTML, CSS, and JavaScript, as well as modern frameworks like Angular. Additionally, I have experience with CSS preprocessors such as SCSS and SASS for efficient styling. I have also integrated APIs, optimized performance, and developed responsive designs to ensure a seamless user experience across different devices.</p>
-            </div>
+            <div class="mobilPosition"><h1 *ngIf="languageService.currentLanguage === 'en'">My Skills</h1>
+                <h1 *ngIf="languageService.currentLanguage === 'de'">Meine Skills</h1>
+            <p *ngIf="languageService.currentLanguage === 'en'">I have worked with various front-end technologies in my projects, including HTML, CSS, and JavaScript, as well as modern frameworks like Angular. Additionally, I have experience with CSS preprocessors such as SCSS and SASS for efficient styling. I have also integrated APIs, optimized performance, and developed responsive designs to ensure a seamless user experience across different devices.</p>
+            <p class="textDe" *ngIf="languageService.currentLanguage === 'de'">In meinen Projekten habe ich mit verschiedenen Frontend-Technologien gearbeitet, darunter HTML, CSS und JavaScript sowie moderne Frameworks wie Angular. Außerdem habe ich Erfahrung mit CSS-Präprozessoren wie SCSS und SASS für effizientes Styling. Außerdem habe ich APIs integriert, die Leistung optimiert und responsive Designs entwickelt, um ein nahtloses Benutzererlebnis auf verschiedenen Geräten zu gewährleisten.</p>
+        </div>
             <div>
-            <div class="flex"><h2>Loocking for </h2><h2 class="h2Color"> another skill</h2><h2>?</h2></div>
-            <p>I am passionate about learning new technologies and frameworks. I enjoy exploring new tools, staying up to date with industry trends, and applying my knowledge to build innovative solutions.</p>
-            <a class="button2" href="#contact">Get in touch</a></div>
+            <div *ngIf="languageService.currentLanguage === 'en'" class="flex">
+                <h2>Loocking for </h2>
+                <h2  class="h2Color"> another skill</h2>
+                <h2>?</h2>
+            </div>
+            <div *ngIf="languageService.currentLanguage === 'de'" class="flex column">
+                <h2>Auf der Suche nach </h2>
+                <h2 class="h2Color"> eine einer anderen Fähigkeit</h2>
+                <h2>?</h2>
+            </div>
+            <p *ngIf="languageService.currentLanguage === 'en'">I am passionate about learning new technologies and frameworks. I enjoy exploring new tools, staying up to date with industry trends, and applying my knowledge to build innovative solutions.</p>
+            <p *ngIf="languageService.currentLanguage === 'de'">Ich lerne leidenschaftlich gerne neue Technologien und Frameworks. Es macht mir Spaß, neue Tools zu erforschen, mich über Branchentrends auf dem Laufenden zu halten und mein Wissen anzuwenden, um innovative Lösungen zu entwickeln.</p>
+            <a *ngIf="languageService.currentLanguage === 'en'" class="button2" href="#contact">Get in touch</a>
+            <a *ngIf="languageService.currentLanguage === 'de'" class="button2" href="#contact">Kontakt aufnehmen</a>
+        </div>
         </div>
         <div class="line"></div>
     </div>

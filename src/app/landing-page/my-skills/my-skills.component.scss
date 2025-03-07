@@ -6,6 +6,10 @@ h1{
     text-align: end;
 }
 
+.textDe{
+    margin-top: -30px!important;
+}
+
 .skillDiv{
     display: flex;
     padding-right: 5vw;
@@ -27,6 +31,15 @@ h1{
         transform: translateY(-10px);
     }
    
+}
+
+.column{
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    >h2{
+        margin-block: 3px;
+    }
 }
 
 .cLearning{
@@ -79,11 +92,11 @@ h1{
 }
 
 .line{
-    margin-top: 68px;
+    margin-top: 55px;
     margin-left: 36px;
     width: 4vw;
     height: 0;
-    border: 1px solid #9747FF;
+    border: 2px solid #9747FF;
 }
 
 .skillRight{
@@ -99,6 +112,7 @@ h1{
             color: #FFFFFF;
             font-size: 16px;
             font-weight: 400;
+            max-width: 516px;
             width: 38vw;
             text-align: justify;
         }
@@ -124,7 +138,8 @@ h2{
     justify-content: center;
     background-color: #70E61C;
     border-radius: 10px;
-    width: 200px;
+    width: fit-content;
+    padding-inline: 30px;
     height: 58px;
     font-size: 23px;
     color: #FFFFFF;
@@ -156,7 +171,8 @@ h2{
     }
 
     .skillLeft{
-        width: 100vw;
+        width: 400px;
+        gap: 10px;
         height: auto;
         margin: 0;
         justify-content: center;
@@ -172,22 +188,24 @@ h2{
     }
 
     .skillRight{
-        width: 100vw;
+        position: relative;
+        width: 90vw;
         margin: 0;
         >div{
-            width: 100vw;
+            width: 90vw;
             >div{
-                width: 100vw;
+                width: 90vw;
                 align-items: center;
                 display: flex;
                 flex-direction: column;
                 >h1{
                     font-size: 45px;
                     text-align: end;
-                    width: 95vw;
+                    width: 90vw;
                 }
                 >p{
-                    width: 95vw!important;
+                    max-width: unset!important;
+                    width: 90vw!important;
                     margin: 10px;
                 }
                 >div{
@@ -206,13 +224,13 @@ h2{
 
     .mobilImg{
         position: relative;
-        top: 350px;
+        top: 240px;
     }
 
     .line{
         position: absolute;
-        left: 370px;
-        top: 1930px;
+        right: -80px;
+        top: -310px;
         width: 68px!important;
         margin: 0;
     }
@@ -231,7 +249,41 @@ h2{
     }
 }
 
-@media(max-width: 350px){
+@media(max-width: 600px){
+    .mobilImg{
+        top: 280px;
+    }
+}
+
+@media(max-width: 500px){
+    .mobilImg{
+        top: 300px;
+    }
+}
+
+
+@media(max-width: 446px){
+    .mobilImg{
+        top: 320px;
+    }
+}
+
+
+@media(max-width: 409px){
+    .mobilImg{
+        top: 340px;
+    }
+}
+
+
+@media(max-width: 380px){
+    .mobilImg{
+        top: 360px;
+    }
+}
+
+
+@media(max-width: 360px){
     .skills{
         margin-top: 100px;
         flex-direction: column;
@@ -266,14 +318,14 @@ h2{
                 >h1{
                     font-size: 45px;
                     text-align: end;
-                    width: 95vw;
+                    width: 300px;
                 }
                 >p{
-                    width: 95vw!important;
+                    width: 300px!important;
                     margin: 10px;
                 }
                 >div{
-                    width: 100vw;
+                    width: 90vw;
                     justify-content: end;
                 }
                 
@@ -283,12 +335,12 @@ h2{
 
     .mobilPosition{
         position: relative;
-        top: -425px;
+        top: -450px;
     }
 
     .mobilImg{
         position: relative;
-        top: 380px;
+        top: 390px;
     }
 
     .line{

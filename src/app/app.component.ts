@@ -1,10 +1,11 @@
-import { Component } from '@angular/core';
+import { Component, OnInit , inject} from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { RouterOutlet } from '@angular/router';
 import {LandingPageComponent} from './landing-page/landing-page.component'
 import { NavBarComponent } from './landing-page/nav-bar/nav-bar.component';
 import { FooterComponent } from './landing-page/footer/footer.component';
 import { MenuComponent } from './menu/menu.component';
+import { LanguageService } from './services/language.service';
 
 @Component({
   selector: 'app-root',
@@ -13,7 +14,7 @@ import { MenuComponent } from './menu/menu.component';
   templateUrl: './app.component.html',
   styleUrl: './app.component.scss'
 })
-export class AppComponent {
+export class AppComponent implements OnInit{
   title = 'portfolio';
 
   isOpen = false;
@@ -21,6 +22,21 @@ export class AppComponent {
   toggleMenu() {
     this.isOpen = !this.isOpen;
     console.log("test")
+  }
+
+  setDefaultLang = 'en'
+
+  ngOnInit() {
+    // if (!localStorage.getItem('language')) {
+    //   localStorage.setItem('language', 'en');
+    // }
+    // this.setDefaultLang = localStorage.getItem('language') || 'en'
+  }
+
+  languageService = inject(LanguageService);
+
+  changeLanguage(lang: string) {
+    this.languageService.setLanguage(lang);
   }
 
 }

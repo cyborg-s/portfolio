@@ -4,9 +4,13 @@
     <h1>Portfolio</h1>
     <div class="lineRight"></div>
   </div>
-  <p class="undertitle flex">
+  <p *ngIf="languageService.currentLanguage === 'en'" class="undertitle flex">
     Explore a selection of my work here - Interact with projects to see my
     skills in action.
+  </p>
+  <p *ngIf="languageService.currentLanguage === 'de'" class="undertitle flex">
+    Sehen Sie sich hier eine Auswahl meiner Arbeiten an - Interagieren Sie mit Projekten, um meine
+    Fähigkeiten in Aktion.
   </p>
   <app-join></app-join>
   <app-sharky></app-sharky>

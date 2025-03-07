@@ -100,7 +100,7 @@ textarea:hover{
     }
     > .line {
       height: 0;
-      border: 1px solid #9747ff;
+      border: 2px solid #9747ff;
       width: 37vw;
     }
   }
@@ -127,7 +127,7 @@ textarea:hover{
         }
         >button{
             height: 58px;
-            width: 253px;
+            width: fit-content;
             font-weight: 400;
             font-size: 23px;
             color: #FFFFFF;
@@ -176,6 +176,7 @@ span{
 }
 
 .shadow5Div{
+  position: relative;
   height: 0;
   >.shadow5{
     position: relative;
@@ -183,6 +184,25 @@ span{
     left: -500px;
     z-index: -1;
   }
+}
+
+.succsess{
+  position: absolute;
+  top: -500px;
+  left: 50%;
+  margin-left: -100px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 400px;
+  height: 80px;
+  background-color: #70e61c81;
+  border-radius: 10px;
+  color: #FFFFFF;
+}
+
+.none{
+  display: none;
 }
 
 
