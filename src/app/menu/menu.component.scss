@@ -5,7 +5,7 @@
 
 header {
     color: #FFFFFF;
-   margin-inline: 100px;
+   padding-inline: 100px;
     padding-block: 37px;
     height: 110px;
     background-color: #141D2F;
@@ -38,7 +38,7 @@ img{
     flex-direction: column;
     font-size: 29px;
     font-weight: 400;
-    background-color: rgba(0, 0, 0, 0.632);
+    background-color: rgba(0, 0, 0, 0.767);
     >.langDiv{
         display: flex;
         justify-content: center;
@@ -105,7 +105,7 @@ img{
     }
 
     header{
-        margin-inline: 10%;
+        padding-inline: 10%;
         padding-block: 0px;
 
     }

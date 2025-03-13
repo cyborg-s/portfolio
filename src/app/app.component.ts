@@ -21,16 +21,12 @@ export class AppComponent implements OnInit{
 
   toggleMenu() {
     this.isOpen = !this.isOpen;
-    console.log("test")
   }
 
   setDefaultLang = 'en'
 
   ngOnInit() {
-    // if (!localStorage.getItem('language')) {
-    //   localStorage.setItem('language', 'en');
-    // }
-    // this.setDefaultLang = localStorage.getItem('language') || 'en'
+
   }
 
   languageService = inject(LanguageService);

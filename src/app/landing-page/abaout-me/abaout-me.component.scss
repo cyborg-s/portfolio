@@ -3,6 +3,8 @@
     width: 31vw;
     height: 31vw;
     border: 2px solid #70E61C;
+    max-height: 453px;
+    max-width: 453px;
 }
 
 .picLine{
@@ -13,6 +15,7 @@
 
 .lineWidth{
     width: 18vw;
+    max-width: 267px;
 }
 
 .aboutMe{
@@ -33,6 +36,7 @@
 
 .wrap{
     text-wrap: wrap;
+    text-align: justify;
 }
 
 .aboutMeText{
@@ -98,11 +102,10 @@ p{
     .aboutMe{
         width: auto;
         flex-direction: column;
-        margin-top: 0;
-        margin-inline: 19px;
+        margin-top: 100px;
+        margin-inline: 6%;
         height: auto;
         align-items: start;
-        margin-left: 8vw;
     }
 
     .aboutMeText{

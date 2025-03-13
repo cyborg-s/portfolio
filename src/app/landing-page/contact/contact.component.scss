@@ -88,6 +88,10 @@ textarea:hover{
   }
 }
 
+.privacyPolice{
+  margin-bottom: 10px;
+}
+
 .contact {
   margin-top: 100px;
   flex-direction: column;
@@ -129,7 +133,7 @@ textarea:hover{
             height: 58px;
             width: fit-content;
             font-weight: 400;
-            font-size: 23px;
+            font-size: 22px;
             color: #FFFFFF;
             background-color: #B6B6B6;
             padding-inline: 30px;
@@ -173,6 +177,7 @@ span{
   background-color: #70E61C!important;
   border: #70E61C;
   color: white;
+  cursor: pointer;
 }
 
 .shadow5Div{
@@ -189,8 +194,8 @@ span{
 .succsess{
   position: absolute;
   top: -500px;
-  left: 50%;
-  margin-left: -100px;
+  left: 50vw;
+  margin-left: -200px;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -224,12 +229,12 @@ span{
       flex-direction: column;
       margin-inline: 0px;
       >.left{
-        width: 90vw;
+        width: 85vw;
         height: auto;
         margin-inline: 27px;
       }
       >.right{
-        width: 100vw;
+        width: 95vw;
         justify-content: center;
       }
     }
@@ -256,7 +261,7 @@ input[type="checkbox"]{
 }
 
 .check{
-  width: 95vw;
+  width: 90vw;
   justify-content: center;
 }
 

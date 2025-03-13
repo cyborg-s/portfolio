@@ -65,6 +65,14 @@ img {
   display: none !important;
 }
 
+@media (max-width: 1000px) {
+  header{
+    >div{
+      gap: 35px;
+    }
+  }
+}
+
 @media (max-width: 820px) {
   .menu {
     display: none !important;
@@ -78,6 +86,6 @@ img {
   }
 
   header {
-    margin-inline: 10%;
+    margin-inline: 6%;
   }
 }

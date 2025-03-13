@@ -17,7 +17,7 @@
       <p *ngIf="languageService.currentLanguage === 'de'">Suchen Sie einen Frontend-Entwickler? Kontaktieren Sie mich!</p>
     </div>
     <div class="right flex">
-      <form class="flex form" (ngSubmit)="onSubmit(contactForm)" #contactForm="ngForm">
+      <form *ngIf="languageService.currentLanguage === 'en'" class="flex form" (ngSubmit)="onSubmit(contactForm)" #contactForm="ngForm">
         <input
           [(ngModel)]="contactData.name"
           #name="ngModel"
@@ -63,20 +63,76 @@
           <span>Your message is empty</span>
         }
         <div class="check flex">
-          <input type="checkbox" name="policy" id="policy" required [(ngModel)]="isChecked"/>
-          <p *ngIf="languageService.currentLanguage === 'en'">
+          <input #checkbox="ngModel" type="checkbox" name="policy" id="policy" required [(ngModel)]="isChecked"/>
+          <p>
             I've read the
-            <a target="_blank" class="privacy" href="privacy">privacy policy</a>
+            <a class="privacy" href="privacy">privacy policy</a>
             and agree to the processing of my data as outlined.
           </p>
-          <p *ngIf="languageService.currentLanguage === 'de'">
+        </div>
+        @if (!checkbox.valid && message.touched){
+          <span class="privacyPolice">Privacy policy is required!</span>
+        }
+        <button [ngClass]="{ 'enabled-button': isFormValid(), 'disabled-button': !isFormValid() }" [disabled]="!isFormValid()" class="submit">Send massage :)</button>
+      </form>
+      <form *ngIf="languageService.currentLanguage === 'de'" class="flex form" (ngSubmit)="onSubmit(contactForm)" #contactForm="ngForm">
+        <input
+          [(ngModel)]="contactData.name"
+          #name="ngModel"
+          type="text"
+          id="name"
+          name="name"
+          placeholder="Dein Name.."
+          required
+          #nameRef="ngModel"
+         [ngClass]="{'error': nameRef.invalid && nameRef.touched}"
+        />
+        @if (!name.valid && name.touched){
+          <span>Dein name ist erforderlich</span>
+        }
+        <input
+          [(ngModel)]="contactData.email"
+          #email="ngModel"
+          type="email"
+          id="email"
+          name="email"
+          placeholder="Deine E-Mail.."
+          required
+          pattern="[a-zA-Z0-9._%+\-]+@[a-zA-Z0-9.\-]+\.[a-zA-Z]{2,}"
+          #emailRef="ngModel"
+          [ngClass]="{'error': emailRef.invalid && emailRef.touched}"
+        />
+        @if (!email.valid && email.touched){
+          <span>Ihre E-Mail ist erforderlich</span>
+        }
+        <textarea
+          #message="ngModel"
+          minlength="4"
+          [(ngModel)]="contactData.message"
+          id="message"
+          name="message"
+          placeholder="Schreibe eine Nachricht.."
+          style="height: 200px"
+          required
+          #messageRef="ngModel"
+          [ngClass]="{'error': messageRef.invalid && messageRef.touched}"
+        ></textarea>
+        @if (!message.valid && message.touched){
+          <span>Ihre Nachricht ist leer</span>
+        }
+        <div class="check flex">
+          <input #checkbox="ngModel" type="checkbox" name="policy" id="policy" required [(ngModel)]="isChecked"/>
+          <p>
             Ich habe die
-            <a target="_blank" class="privacy" href="privacy">Datenschutzbestimmungen</a>
+            <a class="privacy" href="privacy">Datenschutzbestimmungen</a>
             gelesen und stimme der Verarbeitung meiner Daten wie beschrieben zu.
           </p>
-        </div>
-        <button *ngIf="languageService.currentLanguage === 'en'" [ngClass]="{ 'enabled-button': isFormValid(), 'disabled-button': !isFormValid() }" [disabled]="!isFormValid()" class="submit">Send massage :)</button>
-        <button *ngIf="languageService.currentLanguage === 'de'" [ngClass]="{ 'enabled-button': isFormValid(), 'disabled-button': !isFormValid() }" [disabled]="!isFormValid()" class="submit">Nachricht Abschicken :)</button>
+          </div>
+          @if (!checkbox.valid && message.touched){
+            <span class="privacyPolice">Datenschutz muss bestätigt werde!</span>
+          }
+        
+        <button [ngClass]="{ 'enabled-button': isFormValid(), 'disabled-button': !isFormValid() }" [disabled]="!isFormValid()" class="submit">Nachricht Abschicken :)</button>
       </form>
     </div>
   </div>
@@ -88,5 +144,8 @@
 </div>
 <div class="shadow5Div">
   <img class="shadow5" src="../../../assets/img/shadow5.png" alt="">
-  <div #succsess class="succsess none"><p>Succsess!</p></div>
+  <div  #succsess class="succsess none">
+    <p *ngIf="languageService.currentLanguage === 'en'">Test Succsess!</p>
+    <p *ngIf="languageService.currentLanguage === 'de'">Test Erfolgreich!</p>
+  </div>
 </div>

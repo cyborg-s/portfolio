@@ -1,11 +1,18 @@
-.imprint{
+:host {
     display: flex;
-    align-items: center;
+    flex-grow: 1;
+  }
+
+.imprint{
+    display: grid;
+    grid-template-rows: 1fr auto;
+    min-height: calc(100vh - 405px);
     flex-direction: column;
     max-width: 1440px;
     color: #FFFFFF;
     font-size: 16px;
     font-weight: 400;
+    flex-grow: 1;
     >.margin{
         margin-inline: 100px;
     }
@@ -32,3 +39,6 @@ a{
     text-decoration: none;
     color: #70E61C;
 }
+
+
+

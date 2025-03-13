@@ -1,5 +1,6 @@
-img {
+img{
   height: 339px;
+  margin: -70px;
 }
 
 .join {
@@ -70,7 +71,7 @@ img {
         justify-content: center;
     }
     >.right{
-        width: 95vw;
+        width: 90vw;
         align-items: center;
         >h3{
             text-align: center;
@@ -83,5 +84,11 @@ img {
 
   .liveButton{
     margin-right: 30px!important;
+  }
+}
+
+@media (max-width: 420px){
+  img{
+      margin-bottom: 0;
   }
 }

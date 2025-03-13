@@ -2,11 +2,17 @@
     color: #FFFFFF;
     display: flex;
     flex-direction: column;
-    max-width: 1440px;
-    margin-inline: 100px;
+    max-width: 1240px;
+    width: 90vw;
 }
 
 a{
     text-decoration: none;
     color: #70E61C;
+}
+
+@media (max-width: 500px){
+    *{
+        font-size: 14px;
+    }
 }

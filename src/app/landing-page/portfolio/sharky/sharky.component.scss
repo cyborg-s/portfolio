@@ -1,5 +1,6 @@
 img{
     height: 339px;
+    margin: -70px;
 }
 
 .sharky{
@@ -35,6 +36,7 @@ img{
             font-size: 16px;
             color: #FFFFFF;
             font-weight: 400;
+            text-align: end;
         }
         >.buttons{
             >a{
@@ -74,7 +76,7 @@ img{
           justify-content: center;
       }
       >.right{
-          width: 95vw;
+          width: 90vw;
           align-items: center;
           >h3{
               text-align: center;
@@ -90,3 +92,4 @@ img{
     }
   }
   
+

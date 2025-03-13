@@ -59,15 +59,22 @@ export class ContactComponent {
           error: (error) => {
             console.error(error);
           },
-          complete: () => console.info('send post complete'),
+          complete: () => {
+            this.showSuccsess()
+          },
         });
     } else if (ngForm.submitted && ngForm.form.valid && this.mailTest) {
-      this.succsess.nativeElement.classList.remove('none');
+      this.showSuccsess();
+      ngForm.resetForm();
+      console.info("Firebase Hosting unterstüzt kein PHP")
+    }
+  }
+
+  showSuccsess(){
+    this.succsess.nativeElement.classList.remove('none');
       setTimeout(() => {
         this.succsess.nativeElement.classList.add('none');
       }, 800);
-      ngForm.resetForm();
-    }
   }
 
 }

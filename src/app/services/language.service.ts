@@ -4,11 +4,17 @@ import { Injectable, signal } from '@angular/core';
   providedIn: 'root',
 })
 export class LanguageService {
- public currentLanguage: string = 'en'; // Standard-Sprache
+ public currentLanguage: string = 'en';
 
   constructor() {
-    // Falls noch keine Sprache gespeichert ist, setze Standardwert
-    this.currentLanguage =  'en';
+    this.loadLanguage();
+  }
+
+  
+  private loadLanguage(): void {
+    if (typeof window !== 'undefined') {
+    const savedLanguage = localStorage.getItem('language');
+    this.currentLanguage = savedLanguage ? savedLanguage : 'en';}
   }
 
   getLanguage(): string {
@@ -17,6 +23,7 @@ export class LanguageService {
 
   setLanguage(lang: string): void {
     this.currentLanguage = lang;
-    // localStorage.setItem('language', lang);
+    if (typeof window !== 'undefined') {
+    localStorage.setItem('language', lang);}
   }
 }
